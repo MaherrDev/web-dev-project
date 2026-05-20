@@ -4,12 +4,12 @@ import { createResponse } from "../utils.js";
 
 const ordersRouter = express.Router();
 
-// example of post request
+// example of post request to orders 
 // {
 //   "flowerType": "jouri",
 //   "quantity": 10,
 //   "wrapColor": "red",
-//   "cardText": "Happy birthday",
+//   "cardText": "this can be an empty string since its optional",
 //   "deliveryDate": "2026-05-20T15:30"
 // }
 

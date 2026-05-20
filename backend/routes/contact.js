@@ -4,7 +4,7 @@ import { createResponse } from "../utils.js";
 
 const contactRouter = express.Router();
 
-// Example of a post request
+// Example of a post request to Contact message
 // {
 //   "firstname": "Maher",
 //   "lastname": "Almutairi",

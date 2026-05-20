@@ -38,17 +38,17 @@ form.onsubmit = function (event) {
     }
 
     var contactData = {
-        firstName: firstName,
-        lastName: lastName,
-        gender: gender.value,
-        phone: phone,
-        dob: dob,
-        email: email,
-        language: language,
-        message: message
-    };
+    firstname: firstName,
+    lastname: lastName,
+    gender: gender.value,
+    mobile: phone,
+    birthdate: dob,
+    email: email,
+    language: language,
+    message: message
+};
 
-    fetch("http://localhost:3306/contact", {
+    fetch("http://localhost:3000/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
