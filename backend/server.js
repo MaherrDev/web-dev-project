@@ -3,17 +3,21 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 
-import healthRoutes from "./routes/health.routes.js";
-import formRoutes from "./routes/form.routes.js";
+import contactRoutes from "./routes/contact.js";
+import ordersRoutes from "./routes/orders.js";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/health", healthRoutes);
-app.use("/api/forms", formRoutes);
+app.get("/", function (req, res) {
+    res.send("backend works");
+});
 
-app.listen(process.env.PORT, () => {
-  console.log("listening to ", process.env.PORT)
+app.use("/contact", contactRoutes);
+app.use("/orders", ordersRoutes);
+
+app.listen(3000, function () {
+    console.log("Server running on ", 3000);
 });

@@ -1,4 +1,4 @@
-export function respond (success, message, data = undefined) {
+export function createResponse (success, message, data = undefined) {
     const resBody = {
         success: success,
         message: message,
@@ -13,13 +13,13 @@ export function respond (success, message, data = undefined) {
     // valid request:
 //    { 
 //     success: true,
-//     message: "Books fetched successfully",
+//     message: "... fetched successfully",
 //     data: [...] 
 //    }
 
     // invalid:
 //    {
 //     success: false,
-//     message: "Failed to fetch books" 
+//     message: "Failed to fetch ..." 
 //    }
 }
