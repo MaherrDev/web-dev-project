@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الورد الأنيق - صمم باقتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>متجر الورد الأنيق</h1>
+        <p>صمم باقة أحلامك حسب ذوقك الخاص</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about-us.html">من نحن</a></li>
+            <li><a href="contact-us.html">اتصل بنا</a></li>
+            <li><a href="customize.html">تصميم باقتك (طلب خاص)</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="form-section">
+            <h2>تفاصيل الباقة المخصصة</h2>
+            <form action="#" method="POST">
+
+                <div class="form-group">
+                    <label for="flower-type">نوع الورد الأساسي:</label>
+                    <select id="flower-type" name="flowerType" required>
+                        <option value="">اختر نوع الورد...</option>
+                        <option value="jouri">ورد جوري</option>
+                        <option value="tulip">توليب</option>
+                        <option value="lily">زنبق (ليلي)</option>
+                        <option value="orchid">أوركيد</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">عدد الورود (من 10 إلى 100):</label>
+                    <input type="number" id="quantity" name="flowerQty" min="10" max="100" required value="12">
+                </div>
+
+                <div class="form-group">
+                    <label for="wrap-color">لون ورق التغليف الخارجي:</label>
+                    <input type="color" id="wrap-color" name="wrapColor" value="#ffc0cb">
+                </div>
+
+                <div class="form-group">
+                    <label for="card-text">النص المكتوب على كرت الإهداء:</label>
+                    <input type="text" id="card-text" name="cardText" placeholder="مثال: مبروك التخرج!" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery-date">تاريخ ووقت التوصيل المطلوب:</label>
+                    <input type="datetime-local" id="delivery-date" name="deliveryDate" required>
+                </div>
+
+                <button type="submit" class="btn">اعتماد وتجهيز الطلب</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;  جميع الحقوق محفوظة لطلاب جامعة جدة -   .</p>
+    </footer>
+
+</body>
+</html>
