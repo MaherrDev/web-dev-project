@@ -1,4 +1,4 @@
-export async function getAllBooks() {
+export async function getAllBooks(req, res, next) {
   try {
     
   } catch (err) {

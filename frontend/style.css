@@ -1,4 +1,3 @@
-/* إعدادات الخطوط والتنسيق العام للموقع */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* الهيدر (رأس الصفحة) */
 header {
     background-color: #dca7a7;
     color: white;
@@ -25,7 +23,6 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-/* شريط التنقل */
 nav {
     background-color: #4a3b3b;
 }
@@ -50,14 +47,24 @@ nav ul li a:hover, nav ul li a.active {
     font-weight: bold;
 }
 
-/* المحتوى الرئيسي */
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-/* الأقسام والمقالات في الصفحة الرئيسية */
+.index-layout {
+    display: block;
+}
+
+.index-products {
+    width: 100%;
+}
+
+.index-sidebar {
+    margin-top: 1.5rem;
+}
+
 section {
     background: white;
     padding: 2rem;
@@ -93,7 +100,6 @@ article img {
     margin: 1rem 0;
 }
 
-/* الجانب (Aside) */
 aside {
     background-color: #f2dbdb;
     padding: 1.5rem;
@@ -107,7 +113,6 @@ aside h3 {
     padding-bottom: 0.25rem;
 }
 
-/* تنسيق الجداول (صفحة من نحن) */
 .team-table {
     width: 100%;
     border-collapse: collapse;
@@ -129,7 +134,6 @@ aside h3 {
     background-color: #fdfafafb;
 }
 
-/* تنسيق النماذج (Forms) وصفحة اتصل بنا وصمم باقتك */
 .form-section {
     max-width: 600px;
     margin: 0 auto;
@@ -170,9 +174,9 @@ aside h3 {
 }
 
 .radio-label {
-    display: inline-block !important;
+    display: inline-block;
     margin-left: 1.5rem;
-    font-weight: normal !important;
+    font-weight: normal;
 }
 
 .btn {
@@ -191,7 +195,6 @@ aside h3 {
     background-color: #4a3b3b;
 }
 
-/* الفوتر */
 footer {
     background-color: #4a3b3b;
     color: white;
@@ -201,40 +204,49 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   التحكم في التجاوب وحجم الشاشات (Responsive Design - Media Queries)
-   ========================================================================== */
+@media (max-width: 575px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
 
-/* لشاشات الأجهزة المحمولة الصغيرة والكبيرة (576px فما فوق) */
+    nav ul li a {
+        padding: 0.75rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
 @media (min-width: 576px) {
     header h1 {
         font-size: 3rem;
     }
 }
 
-/* لشاشات التابلت (768px فما فوق) */
 @media (min-width: 768px) {
-    /* تحويل طريقة عرض الهيكل الرئيسي في الصفحة الأولى ليصبح محتوى + بجانبه Aside */
-    main {
-        display: flex !important;
+    .index-layout {
+        display: flex;
         gap: 20px;
+        align-items: flex-start;
     }
-    
-    section {
+
+    .index-products {
         flex: 3;
     }
-    
-    aside {
+
+    .index-sidebar {
         flex: 1;
         margin-top: 0;
     }
 }
 
-/* لشاشات الحاسب الآلي العادية (992px فما فوق) */
 @media (min-width: 992px) {
     main {
         max-width: 1140px;
     }
+
     nav ul li a {
         padding: 1rem 2rem;
     }

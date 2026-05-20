@@ -1,5 +1,6 @@
 import express from "express"
-export const booksRouter = express.Router()
+export default booksRouter = express.Router()
+
 import * as controller from '../controllers/booksController.js'
 
 // fill in route for the rest of endpoints i make
